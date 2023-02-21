@@ -8,6 +8,42 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+    constructor() {
+        this.queue = []
+    }
+    add(element) {
+        this.queue.unshift(element);
+    }
+    remove() {
+        const lastElement = this.queue[this.queue.length -1];
+        if(lastElement){
+            this.queue.pop();
+            return lastElement;
+        } else {
+            return undefined;
+        }
+    }
+}
 
 module.exports = Queue;
+
+
+// EJHF Solution 1
+// class Queue {
+//     constructor() {
+//         this.queue = []
+//     }
+//     add(element) {
+//         this.queue.unshift(element);
+//     }
+//     remove() {
+//         const lastElement = this.queue[this.queue.length -1];
+//         if(lastElement){
+//             this.queue.pop();
+//             return lastElement;
+//         } else {
+//             return undefined;
+//         }
+//     }
+// }
